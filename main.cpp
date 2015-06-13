@@ -1,8 +1,5 @@
 #include <iostream>
 #include <SDL2/SDL.h>
-#include <SDL2/SDL_image.h>
-#include <GL/gl.h>
-#include <GL/glu.h>
 #include <include/GraphicsUtil.h>
 
 using namespace std;
@@ -44,7 +41,7 @@ int main()
                         }
                     break;
                 case SDL_MOUSEBUTTONDOWN:
-                    //addRect(event.button.x,event.button.y,20,20,true);
+                    addRect(event.button.x,event.button.y,20,20,true);
                     break;
 
             }
