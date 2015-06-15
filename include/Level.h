@@ -9,8 +9,7 @@
 class Level
 {
     public:
-
-        static const float DEFAULT_GRAVITY = 9.81f;
+const float DEFAULT_GRAVITY=9.81;
         b2World* world;
 
         std::list<Obstacle*> obstacles;

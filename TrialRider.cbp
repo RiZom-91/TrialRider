@@ -136,19 +136,20 @@
 		<Unit filename="DebugDraw.cpp" />
 		<Unit filename="Game.cpp" />
 		<Unit filename="GraphicsUtil.cpp" />
-		<Unit filename="Level.cpp" />
 		<Unit filename="Obstacle.cpp" />
 		<Unit filename="Rider.cpp" />
+		<Unit filename="Settings.cpp" />
 		<Unit filename="b2Object.cpp" />
 		<Unit filename="include/Bike.h" />
 		<Unit filename="include/DebugDraw.h" />
 		<Unit filename="include/Game.h" />
 		<Unit filename="include/Global.h" />
 		<Unit filename="include/GraphicsUtil.h" />
-		<Unit filename="include/Level.h" />
 		<Unit filename="include/Obstacle.h" />
 		<Unit filename="include/Rider.h" />
+		<Unit filename="include/Settings.h" />
 		<Unit filename="include/b2Object.h" />
+		<Unit filename="include/constants.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

@@ -9,20 +9,21 @@
 #include <Box2D/Box2D.h>
 #include <DebugDraw.h>
 
-static SDL_Window* window;
-static SDL_Renderer* renderer;
-static SDL_GLContext glContext;
-static b2World* world;
+#include <constants.h>
 
+static SDL_Window* window = NULL;
+static SDL_Renderer* renderer = NULL;
+static SDL_GLContext glContext = NULL;
+static b2World* world = NULL;
 
-const float M2P=20;
-const float P2M=1/M2P;
-const int WIDTH=640;
-const int HEIGHT=480;
-
+b2Body* createBody(int x, int y, bool dyn);
+b2Body* addCircle(int x, int y, int radius, bool dyn);
 b2Body* addRect(int x,int y,int w,int h,bool dyn);
+b2Body* addBikeToWorld(int x, int y);
 
+void drawCircle(b2Vec2 center, float radius, float angle);
 void drawSquare(b2Vec2* points,b2Vec2 center,float angle);
+void drawPolygon(b2Body* body);
 
 void display();
 

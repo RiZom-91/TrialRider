@@ -470,15 +470,17 @@
 1434041372 /home/romain/Documents/Dev/c++/TrialRider//Box2D/Rope/b2Rope.h
 	<Box2D/Common/b2Math.h>
 
-1434180456 source:/home/romain/Documents/Dev/c++/TrialRider/main.cpp
+1434305710 source:/home/romain/Documents/Dev/c++/TrialRider/main.cpp
 	<iostream>
 	<SDL2/SDL.h>
 	<include/GraphicsUtil.h>
+	<Settings.h>
+	<constants.h>
 
 1434140890 source:/home/romain/Documents/Dev/c++/TrialRider/Level.cpp
 	"include/Level.h"
 
-1434140886 /home/romain/Documents/Dev/c++/TrialRider/include/Level.h
+1434224114 /home/romain/Documents/Dev/c++/TrialRider/include/Level.h
 	<iostream>
 	<list>
 	<Box2D/Box2D.h>
@@ -519,10 +521,12 @@
 1434140892 source:/home/romain/Documents/Dev/c++/TrialRider/Obstacle.cpp
 	"include/Obstacle.h"
 
-1434140835 source:/home/romain/Documents/Dev/c++/TrialRider/Bike.cpp
+1434304435 source:/home/romain/Documents/Dev/c++/TrialRider/Bike.cpp
 	"include/Bike.h"
 
-1434135724 /home/romain/Documents/Dev/c++/TrialRider/include/Bike.h
+1434302561 /home/romain/Documents/Dev/c++/TrialRider/include/Bike.h
+	<constants.h>
+	<Box2D/Box2D.h>
 
 1434140850 source:/home/romain/Documents/Dev/c++/TrialRider/Game.cpp
 	"include/Game.h"
@@ -543,7 +547,7 @@
 1434135657 /home/romain/Documents/Dev/c++/TrialRider/include/b2Object.h
 	<Box2D/Box2D.h>
 
-1434199955 source:/home/romain/Documents/Dev/c++/TrialRider/GraphicsUtil.cpp
+1434314441 source:/home/romain/Documents/Dev/c++/TrialRider/GraphicsUtil.cpp
 	<include/GraphicsUtil.h>
 
 1434138682 /home/romain/Documents/Dev/c++/TrialRider//GraphicsUtil.h
@@ -551,7 +555,7 @@
 	<string>
 	<SDL2/SDL.h>
 
-1434182924 /home/romain/Documents/Dev/c++/TrialRider//include/GraphicsUtil.h
+1434305200 /home/romain/Documents/Dev/c++/TrialRider//include/GraphicsUtil.h
 	<iostream>
 	<string>
 	<SDL2/SDL.h>
@@ -559,10 +563,11 @@
 	<GL/glu.h>
 	<Box2D/Box2D.h>
 	<DebugDraw.h>
+	<constants.h>
 
 1434139304 /home/romain/Documents/Dev/c++/TrialRider//include/Global.h
 
-1434140886 /home/romain/Documents/Dev/c++/TrialRider//include/Level.h
+1434224114 /home/romain/Documents/Dev/c++/TrialRider//include/Level.h
 	<iostream>
 	<list>
 	<Box2D/Box2D.h>
@@ -572,7 +577,9 @@
 
 1434135098 /home/romain/Documents/Dev/c++/TrialRider//include/Rider.h
 
-1434135724 /home/romain/Documents/Dev/c++/TrialRider//include/Bike.h
+1434302561 /home/romain/Documents/Dev/c++/TrialRider//include/Bike.h
+	<constants.h>
+	<Box2D/Box2D.h>
 
 1434200052 /home/romain/Documents/Dev/c++/TrialRider/include/DebugDraw.h
 	"GL/gl.h"
@@ -581,4 +588,15 @@
 
 1434200106 source:/home/romain/Documents/Dev/c++/TrialRider/DebugDraw.cpp
 	"DebugDraw.h"
+
+1434221748 source:/home/romain/Documents/Dev/c++/TrialRider/Settings.cpp
+	"Settings.h"
+
+1434316533 /home/romain/Documents/Dev/c++/TrialRider/include/Settings.h
+	<constants.h>
+
+1434224611 /home/romain/Documents/Dev/c++/TrialRider/include/constants.h
+	<iostream>
+	<string>
+	<math.h>
 

@@ -1,19 +1,16 @@
 #include <iostream>
 #include <SDL2/SDL.h>
 #include <include/GraphicsUtil.h>
+#include <Settings.h>
+#include <constants.h>
 
 using namespace std;
 
-// Application settings and attributs
-const char* TITLE = "Trial Rider";
-const unsigned int WINDOW_W = 640;
-const unsigned int WINDOW_H = 480;
-const Uint16 MAX_FPS_MS = 1000/60;
-const Uint16 MAX_FPS = 1/60;
-
 int main()
 {
-    if (initGraphics(TITLE, WINDOW_W, WINDOW_H) == false)
+    Settings* settings = new Settings();
+
+    if (initGraphics(TITLE.c_str(), settings->get_window_w(), settings->get_window_h()) == false)
         return 1;
 
     bool running = true;
@@ -30,29 +27,50 @@ int main()
             switch(event.type)
             {
                 case SDL_QUIT:
+                {
                     running=false;
-                    break;
+                }
+                break;
+
                 case SDL_KEYDOWN:
+                {
                     switch(event.key.keysym.sym)
                     {
                         case SDLK_ESCAPE:
                             running=false;
                             break;
                         }
-                    break;
-                case SDL_MOUSEBUTTONDOWN:
-                    addRect(event.button.x,event.button.y,20,20,true);
-                    break;
+                }
+                break;
 
+                case SDL_MOUSEBUTTONDOWN:
+                {
+                    switch(event.button.button)
+                    {
+                        case SDL_BUTTON_LEFT:
+                            addRect(event.button.x,event.button.y,20,20,true);
+                            break;
+                        case SDL_BUTTON_RIGHT:
+                            addBikeToWorld(event.button.x, event.button.y);
+                            //addCircle(event.button.x,event.button.y,20,true);
+                            break;
+
+                    }
+                }
+                break;
             }
         }
 
         refreshGraphics();
 
         interval = SDL_GetTicks() - start;
-        cout << "Interval: " << interval << "ms\n";
-        if(interval < MAX_FPS_MS)
-            SDL_Delay(MAX_FPS_MS - interval);
+        if(interval < MIN_TIME_STEP_MILLISECONDS) {
+            SDL_Delay(MIN_TIME_STEP_MILLISECONDS - interval);
+            cout << "60 FPS\n;";
+        }
+        else {
+            cout << 1000.0/interval << " FPS\n;";
+        }
     }
 
     return 0;
